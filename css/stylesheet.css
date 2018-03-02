@@ -20,7 +20,7 @@ nav {
 	z-index: 999;
 }
 .logoAgence {
-	margin: auto;
+	margin: auto auto auto 15%; /*A passer en auto avec les medias queries*/
 }
 .navigation {
 	margin: auto;
@@ -33,7 +33,7 @@ nav {
 	padding: 15px;
 }
 .lienNav:hover {
-	border-top: 3px solid #3491B2;
+	border-top: 3px solid #5CADD3;
 	padding-top: 33px;
 }
 
@@ -42,7 +42,7 @@ nav {
 
 /*Position des images et animations*/
 
-.carrousel li .imgCarrousel { 
+.carrousel .imgCarrousel {
     width: 100%;
     height: 700px;
     position: absolute;
@@ -53,32 +53,110 @@ nav {
     background-position: 60%;
     background-repeat: no-repeat;
     opacity: 0;
-    animation: imageAnimation 20s linear infinite 0s; 
+    animation: imageAnimation 20s linear infinite 0s;
+}
+.carrousel {
+    height: 790px; /*taille du carrousel + la barre de navigation*/
 }
 
 @keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1; animation-timing-function: ease-out; }
-    46% { opacity: 1 }
-    54% { opacity: 0 }
+    0% { opacity: 0; animation-timing-function: ease-in; z-index: 1 }
+    8% { opacity: 1; animation-timing-function: ease-out; z-index: 1 }
+    46% { opacity: 1; z-index: 1 }
+    54% { opacity: 0; z-index: 0 }
     100% { opacity: 0 }
 }
 
-.carrousel li:nth-child(1) .imgCarrousel { 
+.carrousel .imgCarrousel:nth-child(1)  { 
     background-image: url(../img/imgHeader1.jpg);
 }
-.carrousel li:nth-child(2) .imgCarrousel { 
+.carrousel .imgCarrousel:nth-child(2) { 
     background-image: url(../img/imgHeader2.jpg);
     animation-delay: 10s;
 }
 
-/*Textes, lien et bouton dans le carrousel*/
+.chargementCarrousel {
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.2);
+	margin-left: -15%;
+	animation: disparitionChargement 10s linear infinite 0s
+}
+.barreChargementCarrousel {
+	position: absolute;
+	bottom: 0;
+	background-color: #5CADD3;
+	height: 3px;
+	animation: chargementCarrousel 10s ease-in-out infinite 0s;
+}
 
-.titreAgenceCarrousel {
-	color: #3491B2;
+@keyframes chargementCarrousel {
+	0% { width: 0%; opacity: 0 }
+	10% { opacity: 1 }
+	90% { opacity: 1 }
+	100% { width: 100%; opacity: 0 }
+}
+@keyframes disparitionChargement {
+	0% { opacity: 0 }
+	10% { opacity: 1 }
+	90% { opacity: 1 }
+	100% { opacity: 0 }
 }
 
 
+/*Textes, lien et bouton dans le carrousel*/
+
+
+.contenuCarrousel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 85%;
+	margin-left: 15%;
+	margin-right: 50%;
+}
+.titreAgenceCarrousel {
+	color: #5CADD3;
+}
+.contenuCarrousel h1 {
+	font-size: 2.3em;
+	margin-bottom: 20px;
+}
+.contenuCarrousel a { /*Bouton "Plus d'infos"*/
+	width: 100px;
+	margin-top: 20px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	padding: 12px;
+	background-color: #5CADD3;
+	border-radius: 2px;
+	border-bottom: 2px solid #4896BC;
+	transition: background-color 0.3s, border-color 0.3s;
+}
+.lienInfosA:hover {
+	background-color: #297699;
+	border-color: #297699;
+}
+.lienInfosB:hover {
+	background-color: #297699;
+	border-color: #297699;
+}
+
+
+
+
+
+
+
+/*--------------------------------Section Nos services---------------------------------*/
+
+section h2 {
+	text-align: center;
+	margin-top: 100px;
+}
 
 
 
@@ -86,9 +164,7 @@ nav {
 
 /*dev test*/
 
-
 section {
 	height: 100vh;
-	background-color: black;
 }
 

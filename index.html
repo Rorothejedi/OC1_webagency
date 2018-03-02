@@ -16,59 +16,72 @@
 		<!-- Barre de navigation fixe en haut -->
 		<nav>
 			<div class="logoAgence">
-				<a href="#">
+				<a href="#topPage">
 					<img src="img/logo.png" alt="Logo WebAgency">
 				</a>
 			</div>
 
 			<ul class="navigation">
-				<li><a class="lienNav" href="#">Accueil</a></li>
-				<li><a class="lienNav" href="#">Services</a></li>
-				<li><a class="lienNav" href="#">Portfolio</a></li>
-				<li><a class="lienNav" href="#">Contact</a></li>
+				<li><a class="lienNav" href="#topPage">Accueil</a></li>
+				<li><a class="lienNav" href="#services">Services</a></li>
+				<li><a class="lienNav" href="#projets">Portfolio</a></li>
+				<li><a class="lienNav" href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 
 		<!-- Carrousel de presentation -->
 		
-		<ul class="carrousel">
-			<li>
-				<span class="imgCarrousel">
+		<ul class="carrousel" id="topPage">
+			<li class="imgCarrousel">
+				<div class="contenuCarrousel">
 					<h1><span class="titreAgenceCarrousel">WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
 					<p>Vous avez un projet web ? La WebAgency vous aide à les réaliser !</p>
-					<a href="#">Plus d'infos</a>
-				</span>
+					<a class="lienInfosA" href="#services">Plus d'infos</a>
+					<span class="chargementCarrousel">
+						<span class="barreChargementCarrousel"></span>
+					</span>
+				</div>
 			</li>
-			<li>
-				<span class="imgCarrousel">
-					<h1><span class="titreAgenceCarrousel">WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+			<li class="imgCarrousel">
+				<div class="contenuCarrousel">
+					<h1><span class="titreAgenceCarrousel">WEBAGENCY</span> : L'AGENCE DE TOUTES VOS AMBITIONS !</h1>
 					<p>Vous avez un projet web ? La WebAgency vous aide à les réaliser !</p>
-					<a href="#">Plus d'infos</a>
-				</span>
+					<a class="lienInfosB" href="#services">Plus d'infos</a>
+					<span class="chargementCarrousel">
+						<span class="barreChargementCarrousel"></span>
+					</span>
+				</div>
 			</li>
 		</ul>
 			
-		
-		
 	</header>
 
 
 	<!-- Section Nos services -->
-	<section>
+	<section id="services">
+		<h2>NOS SERVICES</h2>
 		
 	</section>
 
 	<!-- Section Nos projets -->
-	<section>
+	<section id="projets">
+		<h2>NOS PROJETS</h2>
 		
 	</section>
 
 
 	<!-- Section Contact -->
-	<section>
+	<section id="contact">
 		
 	</section>
 
 
 </body>
 </html>
+
+<!-- QUESTIONS -->
+<!-- Webkit, moz, etc... Toujours nécessaires ? -->
+
+<!-- TO DO LIST -->
+<!-- Mettre les fonts en place -->
+<!-- Faire le responsive (medias queries) -->
