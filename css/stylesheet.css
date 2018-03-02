@@ -3,6 +3,47 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Polices personnalisés*/
+
+/*@font-face{
+	font-family: "Roboto";
+		src: url("../fonts/Roboto-Black.ttf") format('ttf'),
+			url("../fonts/Roboto-BlackItalic.ttf") format('ttf'),
+			url("../fonts/Roboto-Bold.ttf") format('ttf'),
+			url("../fonts/Roboto-BoldItalic.ttf") format('ttf'),
+			url("../fonts/Roboto-Italic.ttf") format('ttf'),
+			url("../fonts/Roboto-Light.ttf") format('ttf'),
+			url("../fonts/Roboto-LightItalic.ttf") format('ttf'),
+			url("../fonts/Roboto-Medium.ttf") format('ttf'),
+			url("../fonts/Roboto-MediumItalic.ttf") format('ttf'),
+			url("../fonts/Roboto-Regular.ttf") format('ttf'),
+			url("../fonts/Roboto-Thin.ttf") format('ttf'),
+			url("../fonts/Roboto-ThinItalic.ttf") format('ttf');
+
+}*/
+
+@font-face {
+	font-family: 'GlyphiconsHalflings';
+		src: url('..fonts/glyphicons-halflings-regular.eot');
+		src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+	    	url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+	    	url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+	    	url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+@font-face {
+	font-family: "FontAwesome";
+	    src : url("../fonts/fontawesome-webfont.eot");
+		src : url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/fontawesome-webfont.woff") format("woff"),
+			url("../fonts/fontawesome-webfont.ttf") format("truetype"),
+			url("../fonts/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+	font-weight: normal;
+	font-style : normal;
 }
 
 
@@ -29,6 +70,7 @@ nav {
 }
 .lienNav {
 	text-decoration: none;
+	font-weight: 400;
 	color: #656565;
 	padding: 15px;
 }
@@ -56,7 +98,7 @@ nav {
     animation: imageAnimation 20s linear infinite 0s;
 }
 .carrousel {
-    height: 790px; /*taille du carrousel + la barre de navigation*/
+    height: 790px; /*taille du carrousel + taille de la barre de navigation*/
 }
 
 @keyframes imageAnimation { 
@@ -113,7 +155,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 85%;
+	height: 90%;
 	margin-left: 15%;
 	margin-right: 50%;
 }
@@ -124,9 +166,12 @@ nav {
 	font-size: 2.3em;
 	margin-bottom: 20px;
 }
+.contenuCarrousel p {
+	font-size: 0.9em;
+}
 .contenuCarrousel a { /*Bouton "Plus d'infos"*/
 	width: 100px;
-	margin-top: 20px;
+	margin-top: 30px;
 	text-decoration: none;
 	text-align: center;
 	color: white;
@@ -136,27 +181,67 @@ nav {
 	border-bottom: 2px solid #4896BC;
 	transition: background-color 0.3s, border-color 0.3s;
 }
-.lienInfosA:hover {
+.lienInfosA:hover, .lienInfosB:hover {
 	background-color: #297699;
 	border-color: #297699;
 }
-.lienInfosB:hover {
-	background-color: #297699;
-	border-color: #297699;
-}
-
-
-
-
-
 
 
 /*--------------------------------Section Nos services---------------------------------*/
 
+
 section h2 {
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom: 30px;
+	font-size: 2.5em;
 }
+
+/*Barre de séparation*/
+hr {
+	margin: auto;
+	width: 150px;
+	color: red;
+	opacity: 0.5;
+}
+.separateur .rondSeparateur {
+	position: relative;
+	top: -6px;
+	margin: auto;
+	width: 10px;
+	height: 10px;
+	background-color: #5CADD3;
+	border-radius: 100%;
+}
+
+
+.paraphServices {
+	margin: 30px 30% 50px 30%;
+	text-align: center;
+	color: rgb(120,120,120);
+}
+.iconeServices {
+	position: relative;
+}
+.iconeServices:before {
+    font-family: FontAwesome;
+    color: #5CADD3;
+    font-size: 1.8em;
+}
+.iconeServiceA:before {
+	content: "\f201";
+}
+.iconeServiceB:before {
+	content: "\f1b3";
+}
+.iconeServiceC:before {
+	content: "\f200";
+}
+
+.contenuServices {
+	display: flex;
+}
+
 
 
 
@@ -165,6 +250,6 @@ section h2 {
 /*dev test*/
 
 section {
-	height: 100vh;
+	height: 150vh;
 }
 
