@@ -1,0 +1,48 @@
+/*Feuille de style du site web de la WebAgency*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Barre de navigation fixé en haut*/
+
+nav {
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	height: 90px;
+	display: flex;
+	box-shadow: 0px 0px 5px 0px #656565;
+    flex-wrap: wrap;
+}
+.logoAgence {
+	margin: auto;
+}
+.navigation {
+	margin: auto;
+	display: flex;
+	list-style: none;
+}
+.navigation a {
+	text-decoration: none;
+	color: #656565;
+	padding: 15px;
+}
+.lienNav:hover {
+	border-top: 3px solid #3491B2;
+	border-bottom: 3px solid #fff;
+	padding-top: 33px;
+}
+
+
+
+/*dev test*/
+
+body {
+	height: 200vh;
+}
+section {
+	height: 100vh;
+	background-color: lightgrey;
+}
