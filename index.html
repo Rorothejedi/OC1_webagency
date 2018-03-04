@@ -142,30 +142,70 @@
 			</ul>
 		</div>
 		<div class="portfolioProjets">
-			<a href="#projets">
-				<img src="img/portfolio/01.jpg" alt="Image portfolio 1">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/02.jpg" alt="Image portfolio 2">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/03.jpg" alt="Image portfolio 3">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/04.jpg" alt="Image portfolio 4">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/05.jpg" alt="Image portfolio 5">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/06.jpg" alt="Image portfolio 6">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/07.jpg" alt="Image portfolio 7">
-			</a>
-			<a href="#projets">
-				<img src="img/portfolio/08.jpg" alt="Image portfolio 8">
-			</a>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/01.jpg" alt="Image portfolio 1"></a>
+				<figcaption>
+					<h4>Portfolio Item 1</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>	
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/02.jpg" alt="Image portfolio 2"></a>
+				<figcaption>
+					<h4>Portfolio Item 2</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/03.jpg" alt="Image portfolio 3"></a>
+				<figcaption>
+					<h4>Portfolio Item 3</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/04.jpg" alt="Image portfolio 4"></a>
+				<figcaption>
+					<h4>Portfolio Item 4</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/05.jpg" alt="Image portfolio 5"></a>
+				<figcaption>
+					<h4>Portfolio Item 5</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/06.jpg" alt="Image portfolio 6"></a>
+				<figcaption>
+					<h4>Portfolio Item 6</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/07.jpg" alt="Image portfolio 7"></a>
+				<figcaption>
+					<h4>Portfolio Item 7</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
+			<figure>
+				<a href="#projets"><img src="img/portfolio/08.jpg" alt="Image portfolio 8"></a>
+				<figcaption>
+					<h4>Portfolio Item 8</h4>
+					<p>Lorem Ipsum Dolor Sit</p>
+					<div class="iconeHoverProjets"></div>
+				</figcaption>
+			</figure>
 		</div>
 	</section>
 
@@ -176,7 +216,7 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12483.575125257195!2d2.34863963639185!3d48.87063465803669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1520030202540" style="border: 0; width: 100%;" allowfullscreen></iframe>
 		</div>
 		<div class="formContact">
-			<form>
+			<form action="#contact">
 				<h3>Contact Info</h3>
 				<p>
 					<span>WebAgency SAS</span><br>
@@ -192,6 +232,20 @@
 		</div>
 	</section>
 
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Script défilement fluide -->
+	<script>
+		$(document).on('click', 'a[href^="#"]', function (event) {
+		    event.preventDefault();
+
+		    $('html, body').animate({
+		    	scrollTop: $($.attr(this, 'href')).offset().top
+		    }, 650);
+		});
+	</script>
+
 </body>
 </html>
 
@@ -201,8 +255,9 @@
 
 <!-- TO DO LIST -->
 <!-- Rédiger le texte -->
-<!-- faire les hover des projets portfolio -->
 <!-- Faire les boutons gauche et droite pour le carrousel -->
 <!-- Faire le responsive (medias queries) -->
-<!-- Intégrer un smooth scroll avec jquery -->
+
+<!-- END LIST -->
+<!-- Repasser un coup de W3C -->
 <!-- Mettre le site en ligne -->

@@ -228,15 +228,16 @@ hr {
 	opacity: 0.5;
 }
 .separateur .posRondSeparateur {
-	top: -6px;
+	top: -11px;
 }
 .rondBleu {
 	position: relative;
 	margin: auto;
-	width: 10px;
-	height: 10px;
+	width: 12px;
+	height: 12px;
 	background-color: #5CADD3;
 	border-radius: 100%;
+	border: 4px solid white;
 }
 .contenuServices {
 	margin-right: 15%;
@@ -296,7 +297,7 @@ hr {
 	text-align: center;
 }
 .posCercleServices {
-	top: -35px;
+	top: -41px;
 	right: -30px;
 }
 .iconeServices:before {
@@ -392,21 +393,76 @@ hr {
 .portfolioProjets {
 	margin: 50px auto auto auto;
 	padding-bottom: 100px;
-	max-width: 92%;
+	max-width: 85%;
 	text-align: center;
 }
 .portfolioProjets a {
 	text-decoration: none;
 }
-.portfolioProjets a img {
+figure img {
 	width: 330px;
 	height: auto;
+	display: block;
+}
+figure {
+	width: 330px;
+	display: inline-block;
+	position: relative;
 	margin: 10px;
 }
-
-
-
-
+figcaption {
+	text-align-last: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35%;
+	background-color: transparent;
+	cursor: pointer;
+	color: transparent;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-transition: color 0.3s, background-color 0.3s;
+	-o-transition: color 0.3s, background-color 0.3s;
+	transition: color 0.3s, background-color 0.3s;
+}
+figcaption h4, figcaption p {
+	margin: 4px auto 4px 10px;
+}
+figure:hover figcaption {
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+.iconeHoverProjets:before {
+	content: "\f06e";
+	font-family: FontAwesome;
+    font-size: 1em;
+	position: absolute;
+	top: -25px;
+	right: 15px;
+	border: 1.5px solid;
+	border-radius: 50%;
+	padding: 15px;	
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+	-webkit-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+	-o-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+	transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+figure:hover .iconeHoverProjets:before {
+	color: white;
+	background-color: #4DA1B1;
+	border-color: white;
+}
 
 
 /*--------------------------------Section Contact---------------------------------*/
