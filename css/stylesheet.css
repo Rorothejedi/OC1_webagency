@@ -1,4 +1,4 @@
-/*Feuille de style du site web de la WebAgency*/
+/*----------------------Feuille de style du site web de la WebAgency----------------------*/
 
 * {
 	margin: 0;
@@ -6,24 +6,8 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-/*Polices personnalisés*/
+/*-------------------------------Polices personnalisés------------------------------------*/
 
-/*@font-face{
-	font-family: "Roboto";
-		src: url("../fonts/Roboto-Black.ttf") format('ttf'),
-			url("../fonts/Roboto-BlackItalic.ttf") format('ttf'),
-			url("../fonts/Roboto-Bold.ttf") format('ttf'),
-			url("../fonts/Roboto-BoldItalic.ttf") format('ttf'),
-			url("../fonts/Roboto-Italic.ttf") format('ttf'),
-			url("../fonts/Roboto-Light.ttf") format('ttf'),
-			url("../fonts/Roboto-LightItalic.ttf") format('ttf'),
-			url("../fonts/Roboto-Medium.ttf") format('ttf'),
-			url("../fonts/Roboto-MediumItalic.ttf") format('ttf'),
-			url("../fonts/Roboto-Regular.ttf") format('ttf'),
-			url("../fonts/Roboto-Thin.ttf") format('ttf'),
-			url("../fonts/Roboto-ThinItalic.ttf") format('ttf');
-
-}*/
 
 @font-face {
 	font-family: 'GlyphiconsHalflings';
@@ -47,7 +31,7 @@
 }
 
 
-/*Barre de navigation fixé en haut*/
+/*------------------------Barre de navigation fixé en haut--------------------------------*/
 
 
 nav {
@@ -55,9 +39,13 @@ nav {
 	background-color: #fff;
 	width: 100%;
 	height: 90px; /*hauteur de 90px*/
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	box-shadow: 0px 0px 5px 0px #656565;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-shadow: 0px 0px 5px 0px #656565;
+			box-shadow: 0px 0px 5px 0px #656565;
 	z-index: 999;
 }
 .logoAgence {
@@ -65,6 +53,8 @@ nav {
 }
 .navigation {
 	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 }
@@ -95,15 +85,24 @@ nav {
     background-position: 60%;
     background-repeat: no-repeat;
     opacity: 0;
-    animation: imageAnimation 20s linear infinite 0s;
+    -webkit-animation: imageAnimation 20s linear infinite 0s;
+    		animation: imageAnimation 20s linear infinite 0s;
 }
 .carrousel {
     height: 790px; /*taille du carrousel + taille de la barre de navigation*/
 }
 
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; z-index: 1 }
+    8% { opacity: 1; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; z-index: 1 }
+    46% { opacity: 1; z-index: 1 }
+    54% { opacity: 0; z-index: 0 }
+    100% { opacity: 0 }
+}
+
 @keyframes imageAnimation { 
-    0% { opacity: 0; animation-timing-function: ease-in; z-index: 1 }
-    8% { opacity: 1; animation-timing-function: ease-out; z-index: 1 }
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; z-index: 1 }
+    8% { opacity: 1; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; z-index: 1 }
     46% { opacity: 1; z-index: 1 }
     54% { opacity: 0; z-index: 0 }
     100% { opacity: 0 }
@@ -114,9 +113,9 @@ nav {
 }
 .carrousel .imgCarrousel:nth-child(2) { 
     background-image: url(../img/imgHeader2.jpg);
-    animation-delay: 10s;
+    -webkit-animation-delay: 10s;
+    		animation-delay: 10s;
 }
-
 .chargementCarrousel {
 	width: 100%;
 	height: 3px;
@@ -124,21 +123,35 @@ nav {
 	bottom: 0;
 	background-color: rgba(0,0,0,0.2);
 	margin-left: -15%;
-	animation: disparitionChargement 10s linear infinite 0s
+	-webkit-animation: disparitionChargement 10s linear infinite 0s;
+			animation: disparitionChargement 10s linear infinite 0s
 }
 .barreChargementCarrousel {
 	position: absolute;
 	bottom: 0;
 	background-color: #5CADD3;
 	height: 3px;
-	animation: chargementCarrousel 10s ease-in-out infinite 0s;
+	-webkit-animation: chargementCarrousel 10s ease-in-out infinite 0s;
+			animation: chargementCarrousel 10s ease-in-out infinite 0s;
 }
 
+@-webkit-keyframes chargementCarrousel {
+	0% { width: 0%; opacity: 0 }
+	10% { opacity: 1 }
+	90% { opacity: 1 }
+	100% { width: 100%; opacity: 0 }
+}
 @keyframes chargementCarrousel {
 	0% { width: 0%; opacity: 0 }
 	10% { opacity: 1 }
 	90% { opacity: 1 }
 	100% { width: 100%; opacity: 0 }
+}
+@-webkit-keyframes disparitionChargement {
+	0% { opacity: 0 }
+	10% { opacity: 1 }
+	90% { opacity: 1 }
+	100% { opacity: 0 }
 }
 @keyframes disparitionChargement {
 	0% { opacity: 0 }
@@ -152,9 +165,16 @@ nav {
 
 
 .contenuCarrousel {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
 	height: 90%;
 	margin-left: 15%;
 	margin-right: 50%;
@@ -178,12 +198,14 @@ nav {
 	padding: 12px;
 	background-color: #5CADD3;
 	border-radius: 2px;
-	border-bottom: 2px solid #4896BC;
+	border-bottom: 2.5px solid #4192BA;
+	-webkit-transition: background-color 0.3s, border-color 0.3s;
+	-o-transition: background-color 0.3s, border-color 0.3s;
 	transition: background-color 0.3s, border-color 0.3s;
 }
 .lienInfosA:hover, .lienInfosB:hover {
-	background-color: #297699;
-	border-color: #297699;
+	background-color: #4192BA;
+	border-color: #4192BA;
 }
 
 
@@ -192,41 +214,95 @@ nav {
 
 section h2 {
 	text-align: center;
-	margin-top: 100px;
+	padding-top: 100px;
 	margin-bottom: 30px;
 	font-size: 2.5em;
 }
 
 /*Barre de séparation*/
+
 hr {
 	margin: auto;
 	width: 150px;
 	color: red;
 	opacity: 0.5;
 }
-.separateur .rondSeparateur {
-	position: relative;
+.separateur .posRondSeparateur {
 	top: -6px;
+}
+.rondBleu {
+	position: relative;
 	margin: auto;
 	width: 10px;
 	height: 10px;
 	background-color: #5CADD3;
 	border-radius: 100%;
 }
-
-
+.contenuServices {
+	margin-right: 15%;
+	margin-left: 15%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+		justify-content: space-around;
+}
 .paraphServices {
 	margin: 30px 30% 50px 30%;
 	text-align: center;
 	color: rgb(120,120,120);
 }
+.imgContenuService {
+	width: 50%;
+}
+.descriptionContenuServices {
+	width: 50%;
+	height: 300px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-ms-flex-pack: distribute;
+		justify-content: space-around;
+	padding-bottom: 100px;
+}
+.blocContenuServices {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.cercleImgServices {
+	display: block;
+	margin: auto 30px auto auto;
+}
 .iconeServices {
-	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	width: 60px;
+	height: 60px;
+	border: 1px solid rgba(80,80,80,0.3);
+	border-radius: 50%;
+	text-align: center;
+}
+.posCercleServices {
+	top: -35px;
+	right: -30px;
 }
 .iconeServices:before {
     font-family: FontAwesome;
     color: #5CADD3;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 .iconeServiceA:before {
 	content: "\f201";
@@ -237,19 +313,180 @@ hr {
 .iconeServiceC:before {
 	content: "\f200";
 }
+.textServices p {
+	color: rgb(120,120,120);
+	margin-top: 5px;
+}
 
-.contenuServices {
+
+
+/*--------------------------------Section Nos projets---------------------------------*/
+
+
+#projets {
+	background-color: #F5F5F5;
+}
+
+/*Groupement de boutons*/
+
+
+.groupBoutons {
+	width: 400px;
+	text-align: center;
+	margin: auto;
+}
+.groupBoutons li a:first-child {
+	border-radius: 3px 0 0 3px;
+}
+.groupBoutons li a:last-child, .groupBoutons li:last-child {
+	border-radius: 0 3px 3px 0;
+}
+.groupBoutons li {
+	display: inline-block;
+	background-color: #E5E5E5;
+	width: 100px;
+	border: none;
+	line-height: 45px;
+	margin-right: -2px;
+	margin-left: -2px;
+	position: relative;
+}
+.groupBoutons li a {
+	display: block;
+	text-decoration: none;
+	color: rgb(100,100,100);
+	height: 100%;
+	-webkit-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+.groupBoutons li a:hover, .actifBouton {
+	outline: none;
+	background-color: #5CADD3;
+	border-bottom: 2px solid #478DAE;
+	color: white !important;
+	font-weight: 500;
+}
+.groupBoutons li ::after {
+	content: '';
+	position: absolute;
+	display: none;
+	top: 45px;
+	left: 50%;
+	height: 0;
+	width: 0;
+	border: solid transparent;
+	pointer-events: none;
+	border-top-color: #478DAE;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.groupBoutons ul:not(:hover) li .actifBouton::after, .groupBoutons li :hover::after {
+	display: block;
+}
+
+
+/*Portfolio*/
+
+
+.portfolioProjets {
+	margin: 50px auto auto auto;
+	padding-bottom: 100px;
+	max-width: 92%;
+	text-align: center;
+}
+.portfolioProjets a {
+	text-decoration: none;
+}
+.portfolioProjets a img {
+	width: 330px;
+	height: auto;
+	margin: 10px;
+}
+
+
+
+
+
+
+/*--------------------------------Section Contact---------------------------------*/
+
+
+#contact {
+	position: relative;
+	background-color: #5CADD3;
+}
+#contact iframe {
+	opacity: 0.75;
+	height: 90vh;
+}
+.mapContact {
+	height: 100%;
+}
+.formContact {
+	position: absolute;
+	height: 75%;
+	width: 420px;
+	background-color: rgba(255,255,255,0.8);
+	top: 10%;
+	right: 10%;
+	z-index: 99;
+}
+.formContact form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+	-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+			justify-content: space-between;
+	height: 62vh;
+	margin: 25px;
 }
-
-
-
-
-
-
-/*dev test*/
-
-section {
-	height: 150vh;
+.formContact h3 {
+	font-size: 1.7em;
 }
-
+.formContact p {
+	color: rgb(80,80,80);
+}
+.formContact p span:first-child {
+	font-weight: 600;
+}
+.formContact p span:last-child {
+	-webkit-text-decoration: underline dotted;
+			text-decoration: underline dotted;
+}
+.formContact input, .formContact textarea {
+	font-weight: 500;
+	font-size: 0.9em;
+	border-radius: 3px;
+	border: 1px solid lightgrey;
+	color: lightgrey;
+}
+.formContact input {
+	padding: 10px;
+}
+.formContact textarea {
+	padding: 10px 10px 200px 10px;
+}
+.formContact button {
+	width: 125px;
+	height: 38px;
+	font-weight: 500;
+	color: white;
+	background-color: #5CADD3;
+	border-radius: 3px;
+	border: none;
+	border-bottom: 2.5px solid #4192BA;
+	-webkit-transition: background-color 0.3s, border-color 0.3s;
+	-o-transition: background-color 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, border-color 0.3s;
+	cursor: pointer;
+}
+.formContact button:hover {
+	background-color: #4192BA;
+	border-color: #4192BA;
+}
