@@ -9,7 +9,7 @@
 /*-------------------------------Polices personnalisés------------------------------------*/
 
 
-@font-face {
+/*@font-face {
 	font-family: 'GlyphiconsHalflings';
 		src: url('..fonts/glyphicons-halflings-regular.eot');
 		src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
@@ -17,7 +17,7 @@
 	    	url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
 	    	url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
-
+*/
 
 @font-face {
 	font-family: "FontAwesome";
@@ -63,10 +63,15 @@ nav {
 	font-weight: 400;
 	color: #656565;
 	padding: 15px;
+	padding-top: 33px;
+	border-top: 3px solid transparent;
+	transition: color 0.2s, border-color 0.2s;
+
 }
 .lienNav:hover {
-	border-top: 3px solid #5CADD3;
+	border-color: #5CADD3;
 	padding-top: 33px;
+	color: black;
 }
 
 
@@ -224,7 +229,6 @@ section h2 {
 hr {
 	margin: auto;
 	width: 150px;
-	color: red;
 	opacity: 0.5;
 }
 .separateur .posRondSeparateur {
@@ -393,7 +397,6 @@ hr {
 .portfolioProjets {
 	margin: 50px auto auto auto;
 	padding-bottom: 100px;
-	max-width: 85%;
 	text-align: center;
 }
 .portfolioProjets a {
@@ -520,13 +523,15 @@ figure:hover .iconeHoverProjets:before {
 	font-size: 0.9em;
 	border-radius: 3px;
 	border: 1px solid lightgrey;
-	color: lightgrey;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 .formContact input {
 	padding: 10px;
 }
 .formContact textarea {
 	padding: 10px 10px 200px 10px;
+	margin-bottom: 10px;
 }
 .formContact button {
 	width: 125px;
@@ -545,4 +550,186 @@ figure:hover .iconeHoverProjets:before {
 .formContact button:hover {
 	background-color: #4192BA;
 	border-color: #4192BA;
+}
+
+
+
+/*--------------------------------Responsive---------------------------------*/
+
+
+/*Responsive pour les très grands écrans (Laptop XXL)*/
+@media all and (min-width: 1441px) {
+	.portfolioProjets {
+		max-width: 90%;
+	}
+} 
+
+/*Responsive pour écrans larges (Laptop L)*/
+@media all and (max-width: 1440px) {
+	.portfolioProjets {
+		max-width: 95%;
+	}
+}
+
+/*Adaptation de la section Nos Services*/
+@media all and (max-width: 1200px) {
+	.contenuServices {
+		display: block;
+		margin-right: 10%;
+		margin-left: 10%;
+		text-align: justify;
+	}
+	.descriptionContenuServices {
+   		width: 100%;
+	}
+	.imgContenuService {
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	.paraphServices {
+		margin: 30px 10% 50px 10%;
+	}
+	.formContact {
+	    position: initial;
+	    width: 100%;
+	}
+	#contact iframe {
+		height: 60vh;
+	}
+	#contact form {
+		margin: 0 100px 100px 100px;
+		padding-top: 80px;
+	}
+}
+
+/*Responsive pour ordinateur normal (Laptop)*/
+@media all and (max-width: 1024px) {
+	.contenuCarrousel {
+	    margin-left: 10%;
+	    margin-right: 30%;
+	}
+}
+
+/*Responsive pour tablettes*/
+@media all and (max-width: 768px) {
+	.logoAgence {
+	    margin: auto;
+	}
+}
+
+/*Adaptation de la barre de navigation*/
+@media all and (max-width: 628px) {
+	.lienNav:hover {
+		border: none;
+		padding-top: 0;
+		color: #5CADD3;
+		border-color: transparent;
+	}
+	nav {
+		height: 120px;
+	}
+	.carrousel .imgCarrousel {
+		top: 120px;
+	}
+	.contenuCarrousel {
+	    margin-left: 10%;
+	    margin-right: 10%;
+	}
+} 
+
+
+/*Responsive pour smartphones larges (Mobile L)*/
+@media all and (max-width: 583px) {
+	.contenuServices img {
+		width: 100%;
+		height: auto;
+	}
+	.descriptionContenuServices {
+		margin-top: 80px;
+	}
+	.blocContenuServices {
+		padding-bottom: 130px;
+	}
+
+}
+
+
+/*Responsive pour smartphones larges - (Mobile L-)*/
+@media all and (max-width: 425px) {
+	.contenuCarrousel {
+	    margin-left: 10%;
+	    margin-right: 10%;
+	}
+	.descriptionContenuServices {
+		margin-top: 120px;
+	}
+	.blocContenuServices {
+		padding-bottom: 160px;
+	}
+	.paraphServices {
+		text-align: justify;
+	}
+	#contact form {
+		margin: 0 40px 170px 40px;
+	}
+	#contact button {
+		padding-top: 10px;
+		padding-bottom:25px;
+	}
+	.portfolioProjets {
+		max-width: 100%;
+	}
+	figure {
+		margin: auto;
+	}
+}
+
+/*Responsive pour smartphones en mode paysage*/
+@media all and (max-width: 812px) and (orientation: landscape) {
+	#contact form {
+		margin: 0 100px 350px 100px;
+	}
+	#contact button {
+		padding-top: 10px;
+		padding-bottom:25px;
+	}
+}
+
+/*Responsive pour smartphones moyens (Mobile M)*/
+@media all and (max-width: 375px) {
+	.contenuServices {
+		display: block;
+		margin-right: 3%;
+		margin-left: 5%;
+		text-align: justify;
+	}
+	.groupBoutons li {
+		width: 80px;
+	}
+	.groupBoutons {
+		width: auto;
+	}
+}
+
+/*Responsive pour petits smartphones (Mobile S)*/
+@media all and (max-width: 320px) {
+	figure {
+		width: auto;
+	}
+	figure img {
+		width: 85%;
+		height: auto;
+		margin: auto;
+	}
+	figcaption {
+		width: 85%;
+		margin-left: 7.5%;
+	}
+	#contact form {
+		margin-bottom: 250px;
+	}
+	.navigation li {
+		font-size: 0.8em;
+	}
 }
