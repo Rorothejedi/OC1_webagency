@@ -28,7 +28,7 @@ nav {
 	position: fixed;
 	background-color: #fff;
 	width: 100%;
-	height: 90px; /*hauteur de 90px*/
+	height: 90px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -152,6 +152,61 @@ nav div {
 	10% { opacity: 1 }
 	90% { opacity: 1 }
 	100% { opacity: 0 }
+}
+
+.chevronGauche {
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	top: 42%;
+	left: 0;
+	width: 2.5rem;
+	height: 5rem;
+	border-bottom-right-radius: 2.5rem 2.5rem;
+	border-top-right-radius: 2.5rem 2.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+}
+.chevronGauche:before {
+	font-family: 'FontAwesome';
+	font-size: 1.8em;
+	content: '\f104';
+	color: white;
+	text-align: center;
+}
+.chevronDroit {
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	top: 42%;
+	width: 2.5rem;
+	height: 5rem;
+	right: 0;
+	border-bottom-left-radius: 2.5rem 2.5rem;
+	border-top-left-radius: 2.5rem 2.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+}
+.chevronDroit:before {
+	font-family: 'FontAwesome';
+	font-size: 1.8em;
+	content: '\f105';
+	color: white;
+	text-align: center;
 }
 
 
@@ -394,12 +449,12 @@ hr {
 	text-decoration: none;
 }
 figure img {
-	width: 330px;
+	width: 260px;
 	height: auto;
 	display: block;
 }
 figure {
-	width: 330px;
+	width: 260px;
 	display: inline-block;
 	position: relative;
 	margin: 10px;
@@ -521,7 +576,7 @@ figure:hover .iconeHoverProjets:before {
 	padding: 10px;
 }
 .formContact textarea {
-	padding: 10px 10px 200px 10px;
+	padding: 10px 10px 80px 10px;
 	margin-bottom: 10px;
 }
 .formContact button {
@@ -548,10 +603,28 @@ figure:hover .iconeHoverProjets:before {
 /*--------------------------------Responsive---------------------------------*/
 
 
+
+
+
+/*Adaptation de la taille des images*/
+@media all and (max-width: 1441px) and (max-width: 1585px) {
+	figure img, figure {
+		width: 250px;
+	}
+}
+@media all and (min-width: 1586px) {
+	figure img, figure {
+		width: 330px;
+	}
+}
+
 /*Responsive pour les très grands écrans (Laptop XXL)*/
 @media all and (min-width: 1441px) {
 	.portfolioProjets {
 		max-width: 90%;
+	}
+	.formContact textarea {
+		padding: 10px 10px 200px 10px;
 	}
 } 
 
@@ -561,6 +634,7 @@ figure:hover .iconeHoverProjets:before {
 		max-width: 95%;
 	}
 }
+
 
 /*Adaptation de la section Nos Services*/
 @media all and (max-width: 1200px) {
@@ -589,8 +663,12 @@ figure:hover .iconeHoverProjets:before {
 		height: 60vh;
 	}
 	#contact form {
-		margin: 0 100px 100px 100px;
-		padding-top: 80px;
+		margin: 0 100px auto 100px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+	.formContact form {
+		height: auto;
 	}
 }
 
@@ -600,12 +678,27 @@ figure:hover .iconeHoverProjets:before {
 	    margin-left: 10%;
 	    margin-right: 30%;
 	}
+	.chargementCarrousel {
+		margin-left: -10%;
+	}
 }
 
 /*Responsive pour tablettes*/
 @media all and (max-width: 768px) {
 	nav div {
 	    margin: auto;
+	}
+	.formContact form {
+		height: auto;
+	}
+	#contact form {
+		margin: 0 40px auto 40px;
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+	#contact button {
+		padding-top: 10px;
+		padding-bottom:25px;
 	}
 }
 
@@ -637,14 +730,20 @@ figure:hover .iconeHoverProjets:before {
 		height: auto;
 	}
 	.descriptionContenuServices {
-		margin-top: 80px;
+		margin-top: 140px;
+		margin-bottom: 20px;
 	}
 	.blocContenuServices {
-		padding-bottom: 130px;
+		padding-bottom: 40px;
+		margin-right: 8%;
 	}
 	section h2 {
 		padding-top: 130px;
 	}
+	figure img, figure {
+		width: 330px;
+	}
+
 }
 
 
@@ -654,34 +753,37 @@ figure:hover .iconeHoverProjets:before {
 	    margin-left: 10%;
 	    margin-right: 10%;
 	}
-	.descriptionContenuServices {
-		margin-top: 120px;
-	}
-	.blocContenuServices {
-		padding-bottom: 160px;
-	}
 	.paraphServices {
 		text-align: justify;
 	}
-	#contact form {
-		margin: 0 40px 170px 40px;
-	}
-	#contact button {
-		padding-top: 10px;
-		padding-bottom:25px;
-	}
+	
 	.portfolioProjets {
 		max-width: 100%;
 	}
 	figure {
 		margin: auto;
 	}
+	.chevronGauche, .chevronDroit {
+		width: 2rem;
+		height: 4rem;
+	}
+	.groupBoutons {
+		width: auto;
+	}
+	.groupBoutons li {
+		width: 80px;
+	}
 }
 
 /*Responsive pour smartphones en mode paysage*/
 @media all and (max-width: 812px) and (orientation: landscape) {
+	.formContact form {
+		height: auto;
+	}
 	#contact form {
-		margin: 0 100px 350px 100px;
+		margin: 0 40px auto 40px;
+		padding-bottom: 40px;
+		padding-top: 40px;
 	}
 	#contact button {
 		padding-top: 10px;
@@ -697,12 +799,8 @@ figure:hover .iconeHoverProjets:before {
 		margin-left: 5%;
 		text-align: justify;
 	}
-	.groupBoutons li {
-		width: 80px;
-	}
-	.groupBoutons {
-		width: auto;
-	}
+	
+	
 }
 
 /*Responsive pour petits smartphones (Mobile S)*/
@@ -718,9 +816,6 @@ figure:hover .iconeHoverProjets:before {
 	figcaption {
 		width: 85%;
 		margin-left: 7.5%;
-	}
-	#contact form {
-		margin-bottom: 250px;
 	}
 	.navigation li {
 		font-size: 0.8em;
