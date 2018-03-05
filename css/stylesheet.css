@@ -9,16 +9,6 @@
 /*-------------------------------Polices personnalisés------------------------------------*/
 
 
-/*@font-face {
-	font-family: 'GlyphiconsHalflings';
-		src: url('..fonts/glyphicons-halflings-regular.eot');
-		src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-	    	url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
-	    	url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-	    	url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
-*/
-
 @font-face {
 	font-family: "FontAwesome";
 	    src : url("../fonts/fontawesome-webfont.eot");
@@ -48,8 +38,8 @@ nav {
 			box-shadow: 0px 0px 5px 0px #656565;
 	z-index: 999;
 }
-.logoAgence {
-	margin: auto auto auto 15%; /*A passer en auto avec les medias queries*/
+nav div {
+	margin: auto auto auto 15%;
 }
 .navigation {
 	margin: auto;
@@ -58,7 +48,7 @@ nav {
 	display: flex;
 	list-style: none;
 }
-.lienNav {
+.navigation li a {
 	text-decoration: none;
 	font-weight: 400;
 	color: #656565;
@@ -66,9 +56,8 @@ nav {
 	padding-top: 33px;
 	border-top: 3px solid transparent;
 	transition: color 0.2s, border-color 0.2s;
-
 }
-.lienNav:hover {
+.navigation li a:hover {
 	border-color: #5CADD3;
 	padding-top: 33px;
 	color: black;
@@ -184,10 +173,11 @@ nav {
 	margin-left: 15%;
 	margin-right: 50%;
 }
-.titreAgenceCarrousel {
+.contenuCarrousel strong {
 	color: #5CADD3;
 }
 .contenuCarrousel h1 {
+	text-transform: uppercase;
 	font-size: 2.3em;
 	margin-bottom: 20px;
 }
@@ -218,6 +208,7 @@ nav {
 
 
 section h2 {
+	text-transform: uppercase;
 	text-align: center;
 	padding-top: 100px;
 	margin-bottom: 30px;
@@ -613,14 +604,14 @@ figure:hover .iconeHoverProjets:before {
 
 /*Responsive pour tablettes*/
 @media all and (max-width: 768px) {
-	.logoAgence {
+	nav div {
 	    margin: auto;
 	}
 }
 
 /*Adaptation de la barre de navigation*/
 @media all and (max-width: 628px) {
-	.lienNav:hover {
+	.navigation li a:hover {
 		border: none;
 		padding-top: 0;
 		color: #5CADD3;
@@ -651,7 +642,9 @@ figure:hover .iconeHoverProjets:before {
 	.blocContenuServices {
 		padding-bottom: 130px;
 	}
-
+	section h2 {
+		padding-top: 130px;
+	}
 }
 
 

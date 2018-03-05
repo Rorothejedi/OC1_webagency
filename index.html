@@ -1,15 +1,32 @@
+<!-- Projet 1 - Intégrez la maquette du site d'une agence web | OpenClassrooms
+
+Réalisé par Rodolphe Cabotiau
+Date de début de projet : 02/03/2018
+Date d'achèvement : 05/03/2018
+
+Dernière mise à jour : 05/03/2018 -->
+
 <!DOCTYPE html>
 
 <html>
 
 <head>
-	<title>WebAgency Website</title>
+	<title>Projet 1 - OC | Rodolphe Cabotiau</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Balises Open Graph -->
+	<meta property="og:title" content="Projet 1 - OpenClassrooms | Rodolphe Cabotiau">
+	<meta property="og:type" content="projet">
+	<meta property="og:url" content="http://rodolphe.cabotiau.com/projet_1_OpenClassrooms/">
+	<meta property="og:image" content="http://rodolphe.cabotiau.com/projet_1_OpenClassrooms/img/main-feature.png">
+	<!-- Balises Google -->
+	<meta name="description" content="Projet 1 - OpenClassrooms | Intégration de la maquette d'une agence web">
+	<meta name="keywords" content="projet, développeur web, web, OpenClassrooms, Rodolphe Cabotiau, Cabotiau, WebAgency, maquette web, site internet" />
 	<link rel="stylesheet" href="css/stylesheet.css"> <!-- Feuille de style principale -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"><!-- Police d'écriture -->
 </head>
 
 <body>
@@ -18,17 +35,17 @@
 	<header>
 		<!-- Barre de navigation fixe en haut -->
 		<nav>
-			<div class="logoAgence">
+			<div>
 				<a href="#topPage">
 					<img src="img/logo.png" alt="Logo WebAgency">
 				</a>
 			</div>
 
 			<ul class="navigation">
-				<li><a class="lienNav" href="#topPage">Accueil</a></li>
-				<li><a class="lienNav" href="#services">Services</a></li>
-				<li><a class="lienNav" href="#projets">Portfolio</a></li>
-				<li><a class="lienNav" href="#contact">Contact</a></li>
+				<li><a href="#topPage">Accueil</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#projets">Portfolio</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -37,7 +54,7 @@
 		<ul class="carrousel" id="topPage">
 			<li class="imgCarrousel">
 				<div class="contenuCarrousel">
-					<h1><span class="titreAgenceCarrousel">WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+					<h1><strong>WebAgency</strong> : L'agence de tous vos projets !</h1>
 					<p>Vous avez un projet web ? La WebAgency vous aide à les réaliser !</p>
 					<a class="lienInfosA" href="#services">Plus d'infos</a>
 					<span class="chargementCarrousel">
@@ -47,7 +64,7 @@
 			</li>
 			<li class="imgCarrousel">
 				<div class="contenuCarrousel">
-					<h1><span class="titreAgenceCarrousel">WEBAGENCY</span> : L'AGENCE DE TOUTES VOS AMBITIONS !</h1>
+					<h1><strong class="titreAgenceCarrousel">WebAgency</strong> : L'agence de toutes vos ambitions !</h1>
 					<p>Vous n'avez pas encore de site web ? Donnez à votre projet une dimension 2.0 !</p>
 					<a class="lienInfosB" href="#services">Plus d'infos</a>
 					<span class="chargementCarrousel">
@@ -63,7 +80,7 @@
 	<!-- Section Nos services -->
 	<section id="services">
 
-		<h2>NOS SERVICES</h2>
+		<h2>Nos services</h2>
 
 		<div class="separateur">
 			<div>
@@ -119,7 +136,7 @@
 	<!-- Section Nos projets -->
 	<section id="projets">
 
-		<h2>NOS PROJETS</h2>
+		<h2>Nos projets</h2>
 
 		<div class="separateur">
 			<div>
@@ -152,7 +169,7 @@
 
 		<div class="portfolioProjets">
 			<figure>
-				<a href="#projets"><img src="img/portfolio/01.jpg" alt="Image portfolio 1"></a>
+				<a href="#projets"><img src="img/portfolio/01.jpg" alt="Image projet Optique Centre"></a>
 				<figcaption>
 					<h4>Optique Centre</h4>
 					<p>e-voir mieux !</p>
@@ -160,7 +177,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/02.jpg" alt="Image portfolio 2"></a>
+				<a href="#projets"><img src="img/portfolio/02.jpg" alt="Image projet Pink Gift"></a>
 				<figcaption>
 					<h4>Pink Gift</h4>
 					<p>Carte cadeaux e-commerce</p>
@@ -168,7 +185,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/03.jpg" alt="Image portfolio 3"></a>
+				<a href="#projets"><img src="img/portfolio/03.jpg" alt="Image projet Original Pompadour"></a>
 				<figcaption>
 					<h4>Original Pompadour</h4>
 					<p>Haircut style</p>
@@ -176,7 +193,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/04.jpg" alt="Image portfolio 4"></a>
+				<a href="#projets"><img src="img/portfolio/04.jpg" alt="Image projet Paper Style"></a>
 				<figcaption>
 					<h4>Paper Style</h4>
 					<p>Conception d'une identité UI</p>
@@ -184,7 +201,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/05.jpg" alt="Image portfolio 5"></a>
+				<a href="#projets"><img src="img/portfolio/05.jpg" alt="Image projet Shopping Bag"></a>
 				<figcaption>
 					<h4>Shopping Bag</h4>
 					<p>Conception e-commerce</p>
@@ -192,7 +209,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/06.jpg" alt="Image portfolio 6"></a>
+				<a href="#projets"><img src="img/portfolio/06.jpg" alt="Image projet Objectif Mars !"></a>
 				<figcaption>
 					<h4>Objectif Mars !</h4>
 					<p>Plateforme e-learning</p>
@@ -200,7 +217,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/07.jpg" alt="Image portfolio 7"></a>
+				<a href="#projets"><img src="img/portfolio/07.jpg" alt="Image projet Stardust"></a>
 				<figcaption>
 					<h4>Stardust</h4>
 					<p>Rocket project</p>
@@ -208,7 +225,7 @@
 				</figcaption>
 			</figure>
 			<figure>
-				<a href="#projets"><img src="img/portfolio/08.jpg" alt="Image portfolio 8"></a>
+				<a href="#projets"><img src="img/portfolio/08.jpg" alt="Image projet It's all here !"></a>
 				<figcaption>
 					<h4>It's all here !</h4>
 					<p>Design e-boutique</p>
@@ -262,14 +279,10 @@
 </html>
 
 <!-- QUESTIONS -->
-<!-- Plus efficace les fonts locales ou le link Google Font -->
-<!-- Comment faire pour mettre en ligne tous les projets sur mon sous-domaine -->
-<!-- Les boutons groupé, c'est comme ça qu'il faut faire -->
-<!-- Les flèches sont nécessaires ? -->
+<!-- Les flèches sont nécessaires ? Oui mais pas fonctionnelle -->
 
 <!-- TO DO LIST -->
 <!-- Faire les boutons gauche et droite pour le carrousel -->
 <!-- Tester sur tous les navigateurs -->
-
-<!-- END LIST -->
 <!-- Mettre le site en ligne -->
+<!-- Mettre les balise meta -->
