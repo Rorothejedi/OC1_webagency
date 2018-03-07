@@ -324,6 +324,7 @@ hr {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+
 }
 .cercleImgServices {
 	display: block;
@@ -548,7 +549,7 @@ figure:hover .iconeHoverProjets:before {
 	-webkit-box-pack: justify;
 		-ms-flex-pack: justify;
 			justify-content: space-between;
-	height: 62vh;
+	height: auto;
 	margin: 25px;
 }
 .formContact h3 {
@@ -599,42 +600,52 @@ figure:hover .iconeHoverProjets:before {
 }
 
 
-
 /*--------------------------------Responsive---------------------------------*/
 
 
 
-
-
-/*Adaptation de la taille des images*/
-@media all and (max-width: 1441px) and (max-width: 1585px) {
-	figure img, figure {
-		width: 250px;
-	}
-}
-@media all and (min-width: 1586px) {
-	figure img, figure {
-		width: 330px;
-	}
-}
-
-/*Responsive pour les très grands écrans (Laptop XXL)*/
+/*Responsive pour les très grands écrans (XXL)*/
 @media all and (min-width: 1441px) {
 	.portfolioProjets {
 		max-width: 90%;
 	}
 	.formContact textarea {
-		padding: 10px 10px 200px 10px;
+		padding: 10px 10px 170px 10px;
+	}
+	.formContact form, .formContact {
+		height: auto;
 	}
 } 
+
+/*Adaptation de la taille des images*/
+@media all and (min-width: 1441px) and (max-width: 1585px) {
+	.formContact textarea {
+		padding: 10px 10px 130px 10px;
+	}
+}
+
+@media all and (max-width: 1585px) {
+	figure img, figure {
+		width: 250px;
+	}
+}
+@media all and (min-width: 1518px) {
+	figure img, figure {
+		width: 300px;
+	}
+}
+@media all and (min-width: 1596px) {
+	figure img, figure {
+		width: 330px;
+	}
+}
 
 /*Responsive pour écrans larges (Laptop L)*/
 @media all and (max-width: 1440px) {
 	.portfolioProjets {
-		max-width: 95%;
+		max-width: 94%;
 	}
 }
-
 
 /*Adaptation de la section Nos Services*/
 @media all and (max-width: 1200px) {
@@ -720,7 +731,7 @@ figure:hover .iconeHoverProjets:before {
 	    margin-left: 10%;
 	    margin-right: 10%;
 	}
-} 
+}
 
 
 /*Responsive pour smartphones larges (Mobile L)*/
@@ -730,12 +741,11 @@ figure:hover .iconeHoverProjets:before {
 		height: auto;
 	}
 	.descriptionContenuServices {
-		margin-top: 140px;
-		margin-bottom: 20px;
+		margin: 20px auto auto auto;
+		height: auto;
 	}
 	.blocContenuServices {
-		padding-bottom: 40px;
-		margin-right: 8%;
+		margin-bottom: 20px;
 	}
 	section h2 {
 		padding-top: 130px;
@@ -743,15 +753,13 @@ figure:hover .iconeHoverProjets:before {
 	figure img, figure {
 		width: 330px;
 	}
-
 }
-
 
 /*Responsive pour smartphones larges - (Mobile L-)*/
 @media all and (max-width: 425px) {
 	.contenuCarrousel {
-	    margin-left: 10%;
-	    margin-right: 10%;
+		margin-left: 10%;
+		margin-right: 10%;
 	}
 	.paraphServices {
 		text-align: justify;
