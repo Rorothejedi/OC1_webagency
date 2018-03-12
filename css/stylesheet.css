@@ -231,7 +231,7 @@ nav div {
 .contenuCarrousel strong {
 	color: #5CADD3;
 }
-.contenuCarrousel h1 {
+.contenuCarrousel h1, .contenuCarrousel h2 {
 	text-transform: uppercase;
 	font-size: 2.3em;
 	margin-bottom: 20px;
